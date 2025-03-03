@@ -1,8 +1,12 @@
-// app.js
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const { sequelize } = require("./models");
+
+// Import routes
+const authRoutes = require("./routes/authRoutes");
+const expenseRoutes = require("./routes/expenseRoutes");
+const incomeRoutes = require("./routes/incomeRoutes");
 
 // Load env vars
 dotenv.config();
@@ -19,6 +23,10 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to Expense Tracker API" });
 });
+
+app.use("/api/auth", authRoutes);
+app.use("/api/expenses", expenseRoutes);
+app.use("/api/income", incomeRoutes);
 
 // Set port and start server
 const PORT = process.env.PORT || 3000;

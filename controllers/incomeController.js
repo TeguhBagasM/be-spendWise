@@ -1,5 +1,4 @@
-// controllers/incomeController.js
-const { Income } = require("../models");
+const { Income } = require("../models/income");
 
 // Get all income for a user
 exports.getAllIncome = async (req, res) => {
