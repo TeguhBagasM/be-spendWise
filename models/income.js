@@ -1,4 +1,3 @@
-// models/income.js
 module.exports = (sequelize, DataTypes) => {
   const Income = sequelize.define(
     "Income",

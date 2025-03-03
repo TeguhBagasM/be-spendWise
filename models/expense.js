@@ -1,4 +1,3 @@
-// models/expense.js
 module.exports = (sequelize, DataTypes) => {
   const Expense = sequelize.define(
     "Expense",

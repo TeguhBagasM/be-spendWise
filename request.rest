@@ -1,0 +1,8 @@
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+    "full_name": "Bagas",
+    "email": "admin1@spendwise.com",
+    "password": "admin1sw"
+}

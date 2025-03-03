@@ -1,4 +1,4 @@
-const { Income } = require("../models/income");
+const { Income } = require("../models");
 
 // Get all income for a user
 exports.getAllIncome = async (req, res) => {
