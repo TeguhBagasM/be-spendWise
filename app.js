@@ -16,6 +16,21 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Database connection test middleware
+app.use(async (req, res, next) => {
+  try {
+    await sequelize.authenticate();
+    console.log("Database connection successful");
+    next();
+  } catch (error) {
+    console.error("Database connection error:", error);
+    res.status(500).json({
+      error: "Database Connection Failed",
+      message: error.message,
+    });
+  }
+});
+
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to Expense Tracker API" });
 });
@@ -25,16 +40,14 @@ app.use("/api/expenses", expenseRoutes);
 app.use("/api/income", incomeRoutes);
 app.use("/api/balance", balanceRoutes);
 
-// Hapus bagian listen untuk Vercel
-// const PORT = process.env.PORT || 3000;
-// app.listen(PORT, async () => {
-//   console.log(`Server running on port ${PORT}`);
-//   try {
-//     await sequelize.authenticate();
-//     console.log("Database connection has been established successfully.");
-//   } catch (error) {
-//     console.error("Unable to connect to the database:", error);
-//   }
-// });
+// Global error handler
+app.use((err, req, res, next) => {
+  console.error("Unhandled Error:", err);
+  res.status(500).json({
+    error: "Internal Server Error",
+    message: err.message,
+    stack: process.env.NODE_ENV === "development" ? err.stack : undefined,
+  });
+});
 
 module.exports = app;
