@@ -1,6 +1,5 @@
 const { Income } = require("../models");
 
-// Get all income for a user
 exports.getAllIncome = async (req, res) => {
   try {
     const income = await Income.findAll({
@@ -15,7 +14,6 @@ exports.getAllIncome = async (req, res) => {
   }
 };
 
-// Get income by ID
 exports.getIncomeById = async (req, res) => {
   try {
     const income = await Income.findOne({
@@ -33,7 +31,6 @@ exports.getIncomeById = async (req, res) => {
   }
 };
 
-// Create income
 exports.createIncome = async (req, res) => {
   try {
     const { source, amount, date, icon } = req.body;
@@ -56,7 +53,6 @@ exports.createIncome = async (req, res) => {
   }
 };
 
-// Update income
 exports.updateIncome = async (req, res) => {
   try {
     const { source, amount, date, icon } = req.body;
@@ -81,7 +77,6 @@ exports.updateIncome = async (req, res) => {
   }
 };
 
-// Delete income
 exports.deleteIncome = async (req, res) => {
   try {
     const income = await Income.findOne({

@@ -1,6 +1,5 @@
 const { Expense } = require("../models");
 
-// Get all expenses for a user
 exports.getAllExpenses = async (req, res) => {
   try {
     const expenses = await Expense.findAll({
@@ -15,7 +14,6 @@ exports.getAllExpenses = async (req, res) => {
   }
 };
 
-// Get expense by ID
 exports.getExpenseById = async (req, res) => {
   try {
     const expense = await Expense.findOne({
@@ -33,7 +31,6 @@ exports.getExpenseById = async (req, res) => {
   }
 };
 
-// Create expense
 exports.createExpense = async (req, res) => {
   try {
     const { category, amount, date, icon } = req.body;
@@ -56,7 +53,6 @@ exports.createExpense = async (req, res) => {
   }
 };
 
-// Update expense
 exports.updateExpense = async (req, res) => {
   try {
     const { category, amount, date, icon } = req.body;
@@ -81,7 +77,6 @@ exports.updateExpense = async (req, res) => {
   }
 };
 
-// Delete expense
 exports.deleteExpense = async (req, res) => {
   try {
     const expense = await Expense.findOne({
