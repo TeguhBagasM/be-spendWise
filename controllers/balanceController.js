@@ -105,6 +105,7 @@ exports.getRecentTransactions = async (req, res) => {
         "id",
         "source",
         "amount",
+        "icon",
         "date",
         "created_at",
         [sequelize.literal("'income'"), "type"],
@@ -118,6 +119,7 @@ exports.getRecentTransactions = async (req, res) => {
       attributes: [
         "id",
         "category",
+        "icon",
         "amount",
         "date",
         "created_at",

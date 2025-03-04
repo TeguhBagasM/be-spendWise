@@ -28,10 +28,10 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJiYWdhczIxMzRAZ21haWwuY29tIiwiaWF0IjoxNzQxMDgxODEzLCJleHAiOjE3NDExNjgyMTN9.fkOIP_8YzuIwHoOWWIbDPmuCt1JsvbjuYlHkA1cPL_Y
 
 {
-  "category": "Seblak",
-  "amount": 15000,
+  "category": "Chicken",
+  "amount": 8000,
   "date": "2025-03-04",
-  "icon": "🍔"
+  "icon": "🍗"
 }
 
 ### update expense
