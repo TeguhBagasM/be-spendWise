@@ -97,3 +97,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiO
 ### monthly
 GET http://localhost:3000/api/balance/monthly-balance
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJiYWdhczIxMzRAZ21haWwuY29tIiwiaWF0IjoxNzQxMDgxODEzLCJleHAiOjE3NDExNjgyMTN9.fkOIP_8YzuIwHoOWWIbDPmuCt1JsvbjuYlHkA1cPL_Y
+
+### monthly
+GET http://localhost:3000/api/balance/summary-by-date
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJiYWdhczIxMzRAZ21haWwuY29tIiwiaWF0IjoxNzQxMDgxODEzLCJleHAiOjE3NDExNjgyMTN9.fkOIP_8YzuIwHoOWWIbDPmuCt1JsvbjuYlHkA1cPL_Y
