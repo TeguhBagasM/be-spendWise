@@ -57,13 +57,13 @@ exports.login = async (req, res) => {
     // Check if user exists
     const user = await User.findOne({ where: { email } });
     if (!user) {
-      return res.status(401).json({ message: "Invalid credentials" });
+      return res.status(401).json({ message: "Login gagal! email atau password salah." });
     }
 
     // Check password
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-      return res.status(401).json({ message: "Invalid credentials" });
+      return res.status(401).json({ message: "Login gagal! email atau password salah." });
     }
 
     // Generate token

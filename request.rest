@@ -2,7 +2,16 @@ POST http://localhost:3000/api/auth/register
 Content-Type: application/json
 
 {
-    "full_name": "Bagas",
-    "email": "admin1@spendwise.com",
-    "password": "admin1sw"
+    "full_name": "Fiko",
+    "email": "admin2@spendwise.com",
+    "password": "admin2sw"
+}
+
+###
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin1@spendwise.com",
+  "password": "admin1sw"
 }
