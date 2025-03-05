@@ -4,7 +4,6 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "vercel-build": "node app.js",
     "dev": "nodemon app.js",
     "db:migrate": "sequelize-cli db:migrate",
     "db:migrate:undo": "sequelize-cli db:migrate:undo",
