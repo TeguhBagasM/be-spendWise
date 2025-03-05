@@ -26,16 +26,14 @@ app.use("/api/income", incomeRoutes);
 app.use("/api/balance", balanceRoutes);
 
 const PORT = process.env.PORT || 3000;
-
-async function startServer() {
+app.listen(PORT, async () => {
+  console.log(`Server running on port ${PORT}`);
   try {
     await sequelize.authenticate();
     console.log("Database connection has been established successfully.");
   } catch (error) {
     console.error("Unable to connect to the database:", error);
   }
-}
-
-startServer();
+});
 
 module.exports = app;
